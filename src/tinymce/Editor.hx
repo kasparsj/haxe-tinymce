@@ -1,5 +1,8 @@
 package tinymce;
 
+import js.html.Window;
+import js.html.Document;
+import js.html.Element;
 import tinymce.html.DomParser;
 
 @:jsRequire('tinymce', 'Editor')
@@ -30,4 +33,12 @@ extern class Editor
     public function new(id:String, settings:Dynamic, editorManager:EditorManager);
     public function on(name:String, callback:Dynamic, ?prepend:Bool):Editor;
     public function off(?name:String, ?callback:Dynamic):Editor;
+    public function getBody():Element;
+    public function getContainer():Element;
+    public function getContent():String;
+    public function getContentAreaContainer():Element;
+    public function getDoc():Document;
+    public function getElement():Element;
+    public function getParam():String;
+    public function getWin():Window;
 }

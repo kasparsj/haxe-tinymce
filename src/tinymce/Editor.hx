@@ -41,4 +41,6 @@ extern class Editor
     public function getElement():Element;
     public function getParam():String;
     public function getWin():Window;
+    public function execCallback(name:String):Dynamic;
+    public function execCommand(cmd:String, ui:Bool, args:Dynamic):Void;
 }
